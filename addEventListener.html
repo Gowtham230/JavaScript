@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>JavaScript AddEventListener</p>
+        <div id="div1">
+            <h1 >outer Color</h1>
+            <p id="p1">
+                Clik Me
+            </p>
+        </div>
+        <div id="div2">
+        <h1 >outer Color</h1>
+            <p id="p2">
+                Clik Me
+            </p>
+        </div>
+        <script>
+            document.getElementById("p1").addEventListener("click",function(){
+                alert("White Button Clicked");
+            },false)
+
+            document.getElementById("div1").addEventListener("click",function(){
+                alert("orange Button Clicked");
+            },false)
+            document.getElementById("p2").addEventListener("click",function(){
+                alert("White Button Clicked");
+            },true)
+
+            document.getElementById("div2").addEventListener("click",function(){
+                alert("orange Button Clicked");
+            },true)
+        </script>
+        <style>
+            #p1 #p2{
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+            #div1 #div2{
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </body>
+</html>

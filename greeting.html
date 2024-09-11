@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting and Age Verification</title>
+</head>
+<body>
+  <h1>Greeting Program</h1>
+  <button onclick="startProgram()">Start Program</button>
+  
+  <p id="greeting"></p>
+  <p id="access"></p>
+
+  <script>
+    function startProgram() {
+      const userName = prompt("What is your name?");
+      const userAge = prompt("How old are you?");
+      document.getElementById("greeting").textContent = `Hello, ${userName}!`;
+      if (userAge >= 18) {
+        document.getElementById("access").textContent = "You are allowed to access the site.";
+      } else {
+        document.getElementById("access").textContent = "Sorry, you are too young to access this site.";
+      }
+    }
+  </script>
+</body>
+</html>

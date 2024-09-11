@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p><button type="button" onclick="clickMe()">Tyr this</button></p>
+        <div id="color">
+        <div id="animate"></div>
+        
+    </div>
+    
+    <style>
+        #color{
+            width:79vh;
+            height:79vh;
+            background:blue;
+            position:absolute;
+            background-size:cover;
+        }
+        #animate{
+            width:50px;
+            height:50px;
+            background:yellow;
+            position:relative;
+        }
+    </style>
+<script>
+      function clickMe(){
+        let data = null;
+        let anime = document.getElementById("animate");
+        let datas = 0;
+        clearInterval(data);
+        data=setInterval(frame,10)
+        function frame(){
+            if (datas == 500){
+                clearInterval(data);
+            }
+            else{
+                datas++;
+                anime.style.top = datas + "px";
+                anime.style.left = datas + "px";
+            }
+
+        }
+        
+
+      }     
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>JavaScript</p>
+        <p>MouseOver and MouseOut</p>
+        <div onmouseover="over(this)" onmouseout="out(this)" style="background-color:red; height:40px; width: 100px;">Mouse Out</div>
+    </body>
+    <script>
+        function over(obj){
+           
+            obj.innerHTML="I am Mouse Over";
+        }
+        function out(obj){
+            
+            obj.innerHTML="Mouse Out";
+        }
+    </script>
+</html>
